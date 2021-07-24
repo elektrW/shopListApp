@@ -34,7 +34,7 @@ public class ProductController {
     @PostMapping
     public String addProduct(@ModelAttribute Product productModel, RedirectAttributes redirectAttributes) {
         productRepository.save(productModel);
-        redirectAttributes.addFlashAttribute("message", "Product added");
+        redirectAttributes.addFlashAttribute("message", "Product and category added");
         return "redirect:/";
     }
 

@@ -9,9 +9,11 @@
       <table border="1">
         <tr>
           <th>Name</th>
+            <th>Category</th>
         </tr>
         <tr th:each="product: ${productList}">
           <td th:text="${product.name}"></td>
+            <td th:text="${product.category}"></td>
         </tr>
       </table>
     <a th:href="@{/}">Homepage</a>

@@ -7,9 +7,13 @@
 <body>
     <p th:text="${message}"></p>
     <h1>Product list</h1>
-    <form th:action="@{/product}" th:object="${productModel}" method="post">
-        <p><input type="text" th:field="*{name}" placeholder="Product name" /></p>
+    <form action="#" th:action="@{/product}" th:object="${productModel}" method="POST">
+        <input type="text" th:field="*{name}" placeholder="Product name" >
+        <input type="text" th:field="*{category}" placeholder="Category of product" >
+
+        <button type="button">Save</button>
     </form>
+
     <a th:href="@{/product}">List all products</a>
 </body>
 </html>
