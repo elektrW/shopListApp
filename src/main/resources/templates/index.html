@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product manager</title>
+</head>
+<body>
+    <p th:text="${message}"></p>
+    <h1>Product list</h1>
+    <form th:action="@{/product}" th:object="${productModel}" method="post">
+        <p><input type="text" th:field="*{name}" placeholder="Product name" /></p>
+    </form>
+    <a th:href="@{/product}">List all cities</a>
+</body>
+</html>
