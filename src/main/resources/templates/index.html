@@ -11,8 +11,8 @@
     <form action="#" th:action="@{/product}" th:object="${productModel}" method="POST">
         <p><input type="text" th:field="*{name}" placeholder="Product name" />
         <p><input type="text" th:field="*{category}" placeholder="Category of product"/></p>
-        <input type="submit" value="Save"/>
+        <input type="submit" value="Save" class="btn btn-outline-secondary btn-sm"/>
     </form>
-    <input th:href="@{/product}" type="button" value="List of products"/>
+    <a th:href="@{/product}" class="btn btn-outline-secondary btn-sm">List of products</a>
 </body>
 </html>
