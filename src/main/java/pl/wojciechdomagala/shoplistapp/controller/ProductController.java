@@ -26,7 +26,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public String addProduct(@ModelAttribute Product productModel, RedirectAttributes redirectAttributes) {
+    public String addProduct(@ModelAttribute("product") Product productModel, RedirectAttributes redirectAttributes) {
         productService.addProduct(productModel);
         redirectAttributes.addFlashAttribute("message", "Product and category added");
         return "redirect:/";
@@ -34,7 +34,7 @@ public class ProductController {
 
     @GetMapping("/productDelete/{id}")
     public String deleteProduct(@PathVariable (value = "id") long id) {
-        this.productService.deleteProduct(id);
+        this.productService.deleteProductById(id);
         return "redirect:/";
     }
 

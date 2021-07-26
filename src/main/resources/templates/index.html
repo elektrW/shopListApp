@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title  align="center" >Product manager</title>
 </head>
-<body  align="center">
+<body align="center">
     <p th:text="${message}"></p>
     <h1>Product add</h1>
     <form action="#" th:action="@{/product}" th:object="${productModel}" method="POST">
@@ -16,6 +16,7 @@
         <p><input type="text" th:field="*{category}" placeholder="Category of product"/></p>
         <input type="submit" value="Save" class="btn btn-outline-secondary btn-sm"/>
     </form>
-    <a th:href="@{/product}" class="btn btn-outline-secondary btn-sm">List of products</a>
+    <p></p>
+    <a th:href="@{/product}" class="btn btn-outline-secondary btn-sm">Edit</a>
 </body>
 </html>
