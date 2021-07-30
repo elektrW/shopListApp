@@ -17,14 +17,14 @@
             <th scope="col">Actions</th>
         </tr>
           <tbody>
-        <tr th:each="product: ${productList}" vlign="bottom">
-          <td th:text="${product.name}"></td>
-            <td th:text="${product.category}"></td>
-            <td>
-                <a th:href="@{/productDelete/{id}(id=${product.id})}"
-                   class="btn btn-danger">Delete</a>
-            </td>
-        </tr>
+            <tr th:each="product: ${productList}" vlign="bottom">
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.category}"></td>
+                <td>
+                    <a th:href="@{/productDelete/{id}(id=$product.id)}"
+                       class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
           </tbody>
       </table>
     <a th:href="@{/}" class="btn btn-outline-secondary btn-sm">Homepage</a>

@@ -9,6 +9,7 @@
     <title  align="center" >Product manager</title>
 </head>
 <body align="center">
+<div class="container">
     <p th:text="${message}"></p>
     <h1>Product add</h1>
     <form action="#" th:action="@{/product}" th:object="${productModel}" method="POST">
@@ -16,7 +17,9 @@
         <p><input type="text" th:field="*{category}" placeholder="Category of product"/></p>
         <input type="submit" value="Save" class="btn btn-outline-secondary btn-sm"/>
     </form>
-    <p></p>
-    <a th:href="@{/product}" class="btn btn-outline-secondary btn-sm">Edit</a>
+    <form action="#" th:action="@{/productList}">
+        <button type="submit" class="btn btn-outline-secondary btn-sm">Edit</button>
+    </form>
+</div>
 </body>
 </html>

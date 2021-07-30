@@ -3,6 +3,7 @@ package pl.wojciechdomagala.shoplistapp.model;
 import javax.persistence.*;
 
 @Entity
+@Table
 public class Product {
 
     @Id
